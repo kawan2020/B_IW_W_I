@@ -1,0 +1,8 @@
+{
+  "bannerTitle": "YOUR BANNER TITLE FROM CELL B4",
+  "header1": "YOUR HEADER 1 FROM CELL B6",
+  "description1": "YOUR DESCRIPTION 1 FROM CELL B8",
+  "header2": "YOUR HEADER 2 FROM CELL B10",
+  "description2": "YOUR DESCRIPTION 2 FROM CELL B12",
+  "header3": "YOUR HEADER 3 FROM CELL B14"
+}
