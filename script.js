@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     // Exact path to wording document inside data folder
-    const excelFilePath = 'Data/wording.xlsx';
+    const excelFilePath = 'data/wording.xlsx';
 
     fetch(excelFilePath)
         .then(response => {
