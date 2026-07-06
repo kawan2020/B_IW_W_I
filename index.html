@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Webpage Layout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Banner Section -->
+    <header class="banner-section">
+        <div class="banner-overlay">
+            <h1 id="banner-title" data-cell="B4">Loading Title...</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Section 1 -->
+        <section class="section-card section-inline">
+            <div class="section-image">
+                <img src="Data/image1.png" alt="Section 1 Visual Representation">
+            </div>
+            <div class="section-content">
+                <h2 id="header-1" data-cell="B6">Loading Header 1...</h2>
+                <p id="description-1" data-cell="B8">Loading Description...</p>
+            </div>
+        </section>
+
+        <!-- Section 2 -->
+        <section class="section-card section-stacked text-center">
+            <h2 id="header-2" data-cell="B10">Loading Header 2...</h2>
+            <div class="divider"></div>
+            <p id="description-2" data-cell="B12">Loading Description...</p>
+        </section>
+
+        <!-- Section 3 -->
+        <section class="section-card section-tabbed">
+            <div class="tab-header">
+                <span id="header-3" data-cell="B14">Loading Header 3...</span>
+            </div>
+            <div class="tab-body">
+                <img src="Data/image3.jpg" alt="Section 3 Architectural Fence Display">
+            </div>
+        </section>
+    </main>
+
+    <!-- SheetJS CDN Library for parsing xlsx directly via frontend JS -->
+    <script src="https://jsdelivr.net"></script>
+    <script src="script.js"></script>
+</body>
+</html>

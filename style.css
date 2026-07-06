@@ -1,0 +1,178 @@
+/* Base Resets & Page Background Pattern */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-image: url('Data/background.jpg');
+    background-repeat: repeat; /* Endlessly repeating tiling behavior */
+    background-position: top left;
+    /* ADJUST PATTERN SCALE HERE: e.g. 100px makes it smaller, 300px makes it larger */
+    background-size: 1200px auto; 
+    color: #333333;
+    line-height: 1.6;
+    padding-bottom: 60px;
+}
+
+/* App Container Layout */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Card Style Framework matching your PDF mockup */
+.section-card {
+    background-color: #ffffff;
+    border-radius: 28px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    margin-top: 30px;
+    padding: 30px;
+    border: 1px solid #e0e0e0;
+}
+
+/* Banner Section Styling */
+.banner-section {
+    background-image: url('Data/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 160px;
+    margin: 20px auto;
+    max-width: 760px;
+    border-radius: 24px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.banner-overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2); /* Soft blend over layout pattern */
+    backdrop-filter: blur(2px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-overlay h1 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Section 1 Styling (Horizontal Side-by-Side) */
+.section-inline {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.section-image {
+    flex: 0 0 160px;
+    display: flex;
+    justify-content: center;
+}
+
+.section-image img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.section-content h2, 
+.section-stacked h2 {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+    color: #222;
+}
+
+/* Section 2 Styling (Stacked Layout) */
+.text-center {
+    text-align: left; /* Aligns with PDF text presentation */
+}
+
+.section-stacked h2 {
+    text-align: center;
+    font-weight: 500;
+}
+
+.divider {
+    height: 1px;
+    background-color: #cccccc;
+    margin: 15px 0;
+    width: 100%;
+}
+
+/* Section 3 Styling (Folder Tab Layout) */
+.section-tabbed {
+    padding: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.tab-header {
+    background-color: #ffffff;
+    display: inline-block;
+    padding: 12px 35px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border: 1px solid #e0e0e0;
+    border-bottom: none;
+}
+
+.tab-body {
+    background-color: #ffffff;
+    border-radius: 0 28px 28px 28px;
+    padding: 30px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.tab-body img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+
+/* Responsive Mobile Layout Override Media Queries */
+@media (max-width: 600px) {
+    .banner-section {
+        margin: 10px;
+        height: 120px;
+    }
+    
+    .banner-overlay h1 {
+        font-size: 1.6rem;
+    }
+
+    .section-inline {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .section-image {
+        flex: 0 0 auto;
+        width: 120px;
+    }
+    
+    .section-card {
+        padding: 20px;
+        margin-top: 20px;
+    }
+    
+    .tab-body {
+        border-radius: 28px; /* Smooth card fallback on narrow viewports */
+    }
+}
